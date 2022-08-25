@@ -19,13 +19,22 @@ const DiscoverPage = () => {
 
   console.log("do i have the data in the state?", pok);
 
+  const sorted = [...pok].sort((pokem1, pokem2) =>
+    pokem1.name.localeCompare(pokem2.name)
+  );
+
   return (
     <div>
       <h3> Discover page</h3>
       <ul>
-        {pok.map((pokem, i) => (
-          <li key={i}>
-            <Link to={`/details/${pokem.name}`}>{pokem.name}</Link>
+        {sorted.map((pokem, i) => (
+          <li key={i} style={{ listStyle: "none" }}>
+            <Link
+              style={{ color: "pink", textDecoration: "none" }}
+              to={`/details/${pokem.name}`}
+            >
+              {pokem.name}
+            </Link>
           </li>
         ))}
       </ul>

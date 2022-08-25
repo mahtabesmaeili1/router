@@ -2,12 +2,14 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import DiscoverPage from "./pages/DiscoverPage";
+
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import AllPokemons from "./components/AllPokemons";
 function App() {
   return (
     <div className="App">
+      <h1>◓ Pokemon Discovery ◓</h1>
       <NavBar />
       <Routes>
         <Route path="/discover" element={<DiscoverPage />} />

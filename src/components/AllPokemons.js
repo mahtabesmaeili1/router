@@ -22,7 +22,7 @@ const AllPokemons = () => {
     <div>
       <h3>Details</h3>
       <h3>{params.pokemon_name}</h3>
-      <img src={poke.sprites.front_default} />
+      <img src={poke.sprites.front_default} alt={params.pokemon_name} />
       <p>
         Types:
         {poke.types.map((poke) => (
